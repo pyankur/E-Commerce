@@ -1,0 +1,132 @@
+package com.ecommerce.app.model;
+
+import java.sql.Blob;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Users {
+
+	@Id
+	private String email;
+	private String firstName;
+	private String lastName;
+	private String password;
+	private String salt;
+	private String gender;
+	private String phonenumber;
+	private String birthdate;
+	private Blob image;
+	private String role;
+
+	
+
+
+	public Blob getImage() {
+		return image;
+	}
+
+	public void setImage(Blob image) {
+		this.image = image;
+	}
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDOB() {
+		return birthdate;
+	}
+
+	public void setDOB(String dOB) {
+		birthdate = dOB;
+	}
+
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+
+	public Users(String email) {
+		super();
+		this.email = email;
+	}
+
+	public Users() {
+		super();
+	}
+	
+	public String getBirthdate() {
+		return birthdate;
+	}
+
+	public void setBirthdate(String birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "Users [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", password="
+				+ password + ", salt=" + salt + ", gender=" + gender + ", phonenumber=" + phonenumber + ", birthdate="
+				+ birthdate + ", image=" + image + ", role=" + role + "]";
+	}
+
+	
+
+}
